@@ -4,7 +4,7 @@
 
 ## About this submission
 
-This submission is quite unusual for me since this will be the first time I work alone. And as if that wasn't enough, I'll also do the majority of the **work on my phone** using a Bluetooth keyboard. Despite my usual craziness, I do this out of necessity and I just don't take NO for an answer. I was looking forward to participating in this event and so I will. Even though I'll be making a pure JavaScript/jQuery game you can play in your browser.
+This submission is quite unusual for me since this will be the first time I work alone. And as if that wasn't enough, I'll only have a day to complete it. That is why I chose HTML/CSS/JavaScript, since, for me, it provides the most flexibility given the time constraints.
 
 ## Why does this repo contain code before the event started?
 
