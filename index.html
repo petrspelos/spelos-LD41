@@ -3,13 +3,131 @@
   <head>
     <meta charset="utf-8">
     <title>Ludum Dare 41</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
   </head>
   <body>
-    <p>Hello, world!</p>
+    
+    <div class="fullscreen bg-cool">
+      
+    </div>
+
+    <div id="menu" class="fullscreen" style="background-color: transparent;">
+        <div class="container" style="height: 100%">
+          <div class="row align-items-center" style="height: 100%">
+            <div class="col-12 justify-content-md-center text-center">
+                <div class="jumbotron" id="intro-message">
+                  <img src="img/logo.png" style="margin-bottom: 20px;">
+                  <!-- <h1 class="display-4">Welcome, player!</h1> -->
+                  <p class="lead">The skill-based idle game.</p>
+                  <p>Don’t panic, it's simple once you get into it.</p>
+                  <div class="alert alert-primary" role="alert">
+                    We will let you know when it’s safe to panic.
+                  </div>
+                  <hr class="my-4">
+                  <p class="lead">
+                      <button class="btn btn-primary btn-lg btn-block" onclick="startGameAnimation(this);">Start The Game</button>
+                  </p>
+                  <legend>Browser support</legend>
+                  <table class="table table-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">Browser</th>
+                          <th scope="col">Supported</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Chrome</th>
+                          <td><img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png" width="20"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Firefox</th>
+                          <td><img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png" width="20"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Edge</th>
+                          <td>Partially works</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Internet Explorer</th>
+                          <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Red_x.svg/480px-Red_x.svg.png" width="20"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="intro1" class="fullscreen offscreen" style="background-color: transparent;">
+      <div class="container" style="height: 100%">
+        <div class="row align-items-center" style="height: 100%">
+          <div class="col-12 justify-content-md-center text-center">
+            <!-- <div class="card" style="width: 80%; margin: auto;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div> -->
+            <div id="status-card" class="card text-white bg-success mb-3" style="margin-top: 15px;">
+                <div class="card-header"><b>SCORE: <span id="scoreLabel">0</span></b> - Best Score: <span id="bestScoreLabel">0</span> - Longest streak: <span id="bestStreakLabel">0</span></div>
+                <div class="card-body">
+                  <h5 id="status-message" class="card-title" style="font-family: 'Anton', sans-serif; font-size: 40px;">Push the button to start the game.</h5>
+                </div>
+              </div>
+
+            <div class="progress-wrapper">
+            
+                <div class="progress">
+                  <div id="aBar" class="progress-bar bg-purple" role="progressbar" style="width: 49%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div id="midBar" class="progress-bar bg-right" role="progressbar" style="width: 2%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div id="bBar" class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 49%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+                <button style="border-radius: 0;" id="addABtn" class="btn btn-primary btn-lg btn-block" onClick="aAdd();">Push</button>
+                <button style="border-radius: 0; margin: 0;" id="subABtn" class="btn btn-primary btn-lg btn-block btnHidden" onClick="aSub();">Pull</button>
+                <!-- <button class="btn btn-primary" onClick="bAdd();" disabled>bAdd</button> -->
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="notification-wrapper" style="z-index: 5000;">
+        <!-- <div class="card text-white bg-warning mb-3 notification">
+          <div class="card-header">Listen up!</div>
+          <div class="card-body">
+            <h5 class="card-title">This game was made in 18 hours.</h5>
+            <p class="card-text">I wasn't able to participate in the full game jam, but I didn't feel like giving up because of it. That's why it may be kinda rough around the edges.</p>
+            <button class="btn btn-dark" onclick="closeNotification(this);">I understand</button>
+          </div>
+        </div> -->
+      </div>
+
+
+    <div id="blocker" class="fullscreen" style="z-index: 6000;">
+
+    </div>
+
+
+
+    <div class="container" style="height: 100%">
+      <div class="row align-items-center" style="height: 100%">
+        <div class="col-12 justify-content-md-center">
+
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
     <script src="js/lib/jquery-331.min.js"></script>
     <script src="js/lib/popper.min.js"></script>
     <script src="js/lib/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
