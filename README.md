@@ -2,6 +2,8 @@
 
 * Learn more about Ludum Dare [Here](https://ldjam.com/).
 
+* Theme: **combine two incompatible genres**
+
 ## About this submission
 
 This submission is quite unusual for me since this will be the first time I work alone. And as if that wasn't enough, I'll only have a day to complete it. That is why I chose HTML/CSS/JavaScript, since, for me, it provides the most flexibility given the time constraints.
