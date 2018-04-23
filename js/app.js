@@ -200,7 +200,7 @@ function showSafeToPanic() {
 let playing = false;
 
 const defaultaCount = 1;
-const defaultbCount = 98;
+const defaultbCount = 80;
 let aCount = defaultaCount;
 let bCount = defaultbCount;
 
